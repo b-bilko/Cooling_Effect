@@ -4,6 +4,9 @@ An ESP32 sketch that fades a WS2812/NeoPixel strip along FastLED's
 `HeatColors_p` palette, from glowing orange-red down to black, like embers
 cooling off.
 
+On power-up the strip cools from orange-red to black over 3 minutes
+(`COOL_DOWN_MINUTES`). Pressing the button restarts the fade from the top.
+
 ## Hardware
 
 | Part | Notes |
