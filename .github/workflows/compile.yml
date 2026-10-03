@@ -8,10 +8,10 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     steps:
-      # Arduino requires the sketch folder to match the .ino name.
+      # Arduino requires the sketch folder to match the .ino name. The
+      # workspace is already named after the repo (Cooling_Effect), and
+      # compile-sketches needs the checkout at the workspace root.
       - uses: actions/checkout@v4
-        with:
-          path: Cooling_Effect
 
       - uses: arduino/compile-sketches@v1
         with:
@@ -24,5 +24,5 @@ jobs:
             - name: FastLED
               version: 3.10.5
           sketch-paths: |
-            - Cooling_Effect
+            - .
           enable-warnings-report: true
